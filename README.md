@@ -1,9 +1,9 @@
-simpleRos
+simpleRosG
 =========
 
 Use ROS to emulate message types for the robot platform
 
-
+Using gates and serial port programming
 
 ====================
 Gatekeeper node - takes in all commands going to the modules, routes to a gate node based on an internal model
