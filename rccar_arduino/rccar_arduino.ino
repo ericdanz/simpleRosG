@@ -3,6 +3,9 @@
 
 String inputString;
 
+int isError;
+int inByte;
+
 AF_DCMotor motor1(1);
 AF_DCMotor motor2(2);
 AF_DCMotor motor4(4);
@@ -44,6 +47,9 @@ void loop() {
 			if (isError){
 			  Serial.println("ERROR");
 			}
+                        else {
+                           Serial.println('Input Accepted');
+                        }
 			inputString = "";
                  
 		}
@@ -74,8 +80,8 @@ int respondToInput(String inString){
        String lzS = linear.substring(secondComma + 1);
 
        
-       int firstComma = angular.indexOf(',');
-       int secondComma = angular.indexOf(',', firstComma+1);
+       firstComma = angular.indexOf(',');
+       secondComma = angular.indexOf(',', firstComma+1);
        
        String axS = angular.substring(0, firstComma);
        String ayS = angular.substring(firstComma + 1, secondComma);

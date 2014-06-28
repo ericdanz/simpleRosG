@@ -3,6 +3,9 @@
 
 String inputString;
 
+int inByte;
+int isError;
+
 AF_DCMotor motor1(1);
 AF_DCMotor motor2(2);
 AF_DCMotor motor4(4);
@@ -74,8 +77,8 @@ int respondToInput(String inString){
        String lzS = linear.substring(secondComma + 1);
 
        
-       int firstComma = angular.indexOf(',');
-       int secondComma = angular.indexOf(',', firstComma+1);
+       firstComma = angular.indexOf(',');
+       secondComma = angular.indexOf(',', firstComma+1);
        
        String axS = angular.substring(0, firstComma);
        String ayS = angular.substring(firstComma + 1, secondComma);
@@ -95,8 +98,6 @@ int respondToInput(String inString){
        if(az > 0){
           motor4.setSpeed(az);
           motor4.run(FORWARD);
-	  delay(1000);
-	  motor4.run(RELEASE);
        }
       
        else if(az < 0){

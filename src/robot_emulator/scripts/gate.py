@@ -3,6 +3,7 @@
 from robot_emulator.msg import *
 from modulemodel import *
 import moduleconnection as mc
+from geometry_msgs.msg import Twist
 import rospy
 import sys
 import time
@@ -16,7 +17,9 @@ class Gate:
 		self.number = gnumber
 		self.module = Module()
 		#is gnumber going to be port number as well?
-		self.module = mc.bootModule(gnumber)
+		self.module.settype( mc.bootModule(gnumber) )	
+		if (self.module.settype == "locomotion"):
+			rospy.Subscriber('locomotionInputs', Twist, self.doInput)
 		
 	def parseReq(self,data):
 		rospy.loginfo('this is parse Req')
@@ -28,22 +31,16 @@ class Gate:
 	def doInput(self,data):
 		#check the name on the input, if it matches this module
 		#do the input if possible or publish an error
-		pass
+		
+ 		#will add gate names later
 
-	def bootResponder(self):
-		rospy.loginfo('inside boot responder')
-		bootPub = rospy.Publisher('boot', BootResponse, queue_size=1, latch=True)
-		#need a name inside the boot message, so this module will
-		#be able to identify messages sent to itself
-		bootString = BootResponse()
-		bootString.gatenumber = self.number
-		#self.number
-		bootString.gatetype = "locomotion"
-		bootPub.publish(bootString)
+		inputString = 'i/lx:{},ly:{},lz{}/ax:{},ay:{},az:{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
+		outString = mc.readunreliable(inputString, self.number)
+
 		
 
 if __name__ == '__main__':
 	rospy.init_node('gate', anonymous=True)
-	gate = Gate()
+	gate = Gate(0)
 	rospy.loginfo("Gate Node Started")
 	rospy.spin()
