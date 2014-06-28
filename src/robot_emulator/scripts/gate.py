@@ -2,6 +2,7 @@
 
 from robot_emulator.msg import *
 from modulemodel import *
+import moduleconnection as mc
 import rospy
 import sys
 import time
@@ -11,8 +12,11 @@ class Gate:
 
 	def __init__(self, gnumber=1):
 		rospy.Subscriber('reqs', Request, self.parseReq)
-		rospy.Subscriber('inputs', Input, self.doInput)
+		#rospy.Subscriber('inputs', Input, self.doInput)
 		self.number = gnumber
+		self.module = Module()
+		#is gnumber going to be port number as well?
+		self.module = mc.bootModule(gnumber)
 		
 	def parseReq(self,data):
 		rospy.loginfo('this is parse Req')

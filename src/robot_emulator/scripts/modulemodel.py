@@ -1,13 +1,13 @@
 class Module:
-	def __init__(self, modclass='None'):
+	def __init__(self, mtype='None'):
 		self.ios = []
-		self.modclass = modclass
+		self.mtype = mtype
 
 	def addio(self, io):
 		self.ios.append(io)
 
-	def setclass(self, modclass):
-		self.modclass = modclass
+	def settype(self, mtype):
+		self.mtype = mtype
 
 class InOut:
 	def __init__(self):

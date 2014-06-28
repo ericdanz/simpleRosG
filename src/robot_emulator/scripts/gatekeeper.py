@@ -26,16 +26,16 @@ class Gatekeeper:
 		reqPub.publish(thisRequest)
 
 	def buildModel(self,data):
-		rospy.loginfo("*"+data.moduletype+"*")
+		rospy.loginfo("*"+data.gatetype+"*")
 		#make sure gatetype conforms to known types before creating a gate model
-		if data.moduletype == 'locomotion':	
-			modmodel = Module(data.moduletype,data.modulenumber)		
-			self.gkmodel.addmodule(modmodel)
+		if data.gatetype == 'locomotion':	
+			gmodel = GateModel(data.gatetype,data.gatenumber)		
+			self.gkmodel.addgate(gmodel)
 			#this is a hack to send a Twist and test the system
-			self.sendInput(modmodel,fakeTwist)
-		elif data.moduletype == 'sensor':
-			modmodel = Module(data.moduletype, data.modulenumber)
-			self.gkmodel.addmodule(modmodel)		
+			self.sendInput(gmodel,fakeTwist)
+		elif data.gatetype == 'sensor':
+			gmodel = GateModel(data.gatetype, data.gatenumber)
+			self.gkmodel.addgate(gmodel)		
 		print self.gkmodel
 
 	def updateModel(self,data):
@@ -49,8 +49,8 @@ class Gatekeeper:
 		#it and send it off to the gates		
 		pass
 	
-	def sendInput(self,Module,mInput):
-		if Module.mtype == 'locomotion':
+	def sendInput(self,gate,mInput):
+		if gate.gtype == 'locomotion':
 			lInPub = rospy.Publisher('locomotionInputs', Twist, queue_size=2, latch=True)
 			#clear the pipes
 			newLInput = Twist()

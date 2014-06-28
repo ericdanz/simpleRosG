@@ -1,2 +1,2 @@
-int64 modulenumber
-string moduletype
+int64 gatenumber
+string gatetype
