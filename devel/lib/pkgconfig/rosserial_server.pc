@@ -1,8 +1,8 @@
-prefix=/home/ed/Dropbox/GitHub/simpleRos/devel
+prefix=/home/ed/Dropbox/GitHub/simpleRosG/devel
 
 Name: rosserial_server
 Description: Description of rosserial_server
 Version: 0.6.0
 Cflags: 
-Libs: -L/home/ed/Dropbox/GitHub/simpleRos/devel/lib 
+Libs: -L/home/ed/Dropbox/GitHub/simpleRosG/devel/lib 
 Requires: 

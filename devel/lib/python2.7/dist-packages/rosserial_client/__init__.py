@@ -6,7 +6,7 @@ from sys import path as sys_path
 
 from pkgutil import extend_path
 
-__extended_path = "/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_client/src".split(";")
+__extended_path = "/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_client/src".split(";")
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

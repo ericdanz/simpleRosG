@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from robot_emulator.msg import *
+from robot_emulator_too.msg import *
 from modulemodel import *
 import moduleconnection as mc
 from geometry_msgs.msg import Twist
@@ -35,7 +35,7 @@ class Gate:
  		#will add gate names later
 
 		inputString = 'i/lx:{},ly:{},lz{}/ax:{},ay:{},az:{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
-		outString = mc.readunreliable(inputString, self.gnumber)
+		outString = mc.readunreliable(inputString, self.number)
 
 		
 

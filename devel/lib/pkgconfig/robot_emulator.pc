@@ -1,8 +1,8 @@
-prefix=/home/ed/Dropbox/GitHub/simpleRos/devel
+prefix=/home/ed/Dropbox/GitHub/simpleRosG/devel
 
 Name: robot_emulator
 Description: Description of robot_emulator
 Version: 0.0.1
-Cflags: -I/home/ed/Dropbox/GitHub/simpleRos/devel/include
-Libs: -L/home/ed/Dropbox/GitHub/simpleRos/devel/lib -lrobot_emulator
+Cflags: -I/home/ed/Dropbox/GitHub/simpleRosG/devel/include
+Libs: -L/home/ed/Dropbox/GitHub/simpleRosG/devel/lib -lrobot_emulator
 Requires: roscpp rospy std_msgs message_runtime

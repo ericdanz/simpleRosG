@@ -1,8 +1,8 @@
-prefix=/home/ed/Dropbox/GitHub/simpleRos/install
+prefix=/home/ed/Dropbox/GitHub/simpleRosG/install
 
 Name: rosserial_client
 Description: Description of rosserial_client
 Version: 0.6.0
 Cflags: 
-Libs: -L/home/ed/Dropbox/GitHub/simpleRos/install/lib 
+Libs: -L/home/ed/Dropbox/GitHub/simpleRosG/install/lib 
 Requires: 
