@@ -41,6 +41,9 @@ void loop() {
 			//check what the input string was
       
 			isError = respondToInput(inputString);  
+			if (isError){
+			  Serial.println("ERROR");
+			}
 			inputString = "";
                  
 		}
@@ -54,11 +57,54 @@ int respondToInput(String inString){
        Serial.println("locomotion");
     }
     else if (inString.charAt(0) == 'i'){
+       //Break this out into a separate function at some point
+       //This recreates a twist, eventually
        int endS = inString.indexOf("#");
+       int firstSlash = inString.indexOf('/');
+       int secondSlash = inString.indexOf('/',firstSlash + 1);
 
+       String linear = inString.substring(firstSlash + 1,secondSlash);
+       String angular = inString.substring(secondSlash + 1, endS);
+
+       int firstComma = linear.indexOf(',');
+       int secondComma = linear.indexOf(',', firstComma+1);
+       
+       String lxS = linear.substring(0, firstComma);
+       String lyS = linear.substring(firstComma + 1, secondComma);
+       String lzS = linear.substring(secondComma + 1);
+
+       
+       int firstComma = angular.indexOf(',');
+       int secondComma = angular.indexOf(',', firstComma+1);
+       
+       String axS = angular.substring(0, firstComma);
+       String ayS = angular.substring(firstComma + 1, secondComma);
+       String azS = angular.substring(secondComma + 1);
+
+       int lx = lxS.substring(3).toInt();
+       int ly = lyS.substring(3).toInt();
+       int lz = lzS.substring(3).toInt();
+
+       int ax = axS.substring(3).toInt(); 
+       int ay = ayS.substring(3).toInt();
+       int az = azS.substring(3).toInt();
+
+       //only uses two values, linear.x and angular.z
+ 
+       if(lx > 0){
+          motor1.setSpeed(lx);
+          motor1.run(FORWARD);
+  
+          motor2.setSpeed(lx);
+          motor2.run(FORWARD);
+       }
+      
+       else if(lx < 0){
+
+       }
 
     }
 
-
+  return 0;
 }
 
