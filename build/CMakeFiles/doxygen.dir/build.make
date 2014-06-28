@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRos/src
+CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRosG/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRos/build
+CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRosG/build
 
 # Utility rule file for doxygen.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRos/build
 include CMakeFiles/doxygen.dir/progress.make
 
 CMakeFiles/doxygen:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "doxygen found"
 
 doxygen: CMakeFiles/doxygen
@@ -62,6 +62,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRos/src /home/ed/Dropbox/GitHub/simpleRos/src /home/ed/Dropbox/GitHub/simpleRos/build /home/ed/Dropbox/GitHub/simpleRos/build /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRosG/src /home/ed/Dropbox/GitHub/simpleRosG/src /home/ed/Dropbox/GitHub/simpleRosG/build /home/ed/Dropbox/GitHub/simpleRosG/build /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

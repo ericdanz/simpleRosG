@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRos/src
+CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRosG/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRos/build
+CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRosG/build
 
 # Utility rule file for topic_tools_generate_messages_py.
 
@@ -56,10 +56,10 @@ rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
 .PHONY : rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
 
 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/topic_tools_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/topic_tools_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/clean
 
 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/depend:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRos/src /home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRos/build /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRosG/src /home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRosG/build /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/depend
 

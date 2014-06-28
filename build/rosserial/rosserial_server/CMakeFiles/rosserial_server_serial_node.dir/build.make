@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRos/src
+CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRosG/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRos/build
+CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRosG/build
 
 # Include any dependencies generated for this target.
 include rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend.make
@@ -50,18 +50,18 @@ include rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/p
 include rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/flags.make
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/flags.make
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o: /home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/serial_node.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_1)
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o: /home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/serial_node.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o -c /home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/serial_node.cpp
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o -c /home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/serial_node.cpp
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/serial_node.cpp > CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/serial_node.cpp > CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/serial_node.cpp -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/serial_node.cpp -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o.requires:
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o.requires
@@ -79,42 +79,42 @@ rosserial_server_serial_node_OBJECTS = \
 # External object files for target rosserial_server_serial_node
 rosserial_server_serial_node_EXTERNAL_OBJECTS =
 
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libtopic_tools.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/liblog4cxx.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librostime.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libcpp_common.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libconsole_bridge.so
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rosserial_server_serial_node.dir/link.txt --verbose=$(VERBOSE)
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libtopic_tools.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/liblog4cxx.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librostime.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libcpp_common.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libconsole_bridge.so
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node"
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rosserial_server_serial_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/rosserial_server/serial_node
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/rosserial_server/serial_node
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/requires: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o.requires
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/requires
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_server_serial_node.dir/cmake_clean.cmake
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_server_serial_node.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRos/src /home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRos/build /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRosG/src /home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRosG/build /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend
 

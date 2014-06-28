@@ -35,82 +35,82 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRos/src
+CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRosG/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRos/build
+CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRosG/build
 
 # Utility rule file for robot_emulator_generate_messages_py.
 
 # Include the progress variables for this target.
 include robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/progress.make
 
-robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
-robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
-robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
-robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
-robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
-robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py
-robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py
+robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
+robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
+robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
+robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
+robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
+robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py
+robot_emulator/CMakeFiles/robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py
 
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py: /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_1)
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py: /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_emulator/BootResponse"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg
 
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py: /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_emulator/Request"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg
-
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py: /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_3)
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py: /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_emulator/Error"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg
 
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py: /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_4)
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py: /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_emulator/Output"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg
 
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py: /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_5)
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py: /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_emulator/Input"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg
 
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_6)
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py: /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG robot_emulator/Request"
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg -Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p robot_emulator -o /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg
+
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for robot_emulator"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg --initpy
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg --initpy
 
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
-/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRos/build/CMakeFiles $(CMAKE_PROGRESS_7)
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
+/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ed/Dropbox/GitHub/simpleRosG/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for robot_emulator"
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv --initpy
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv --initpy
 
 robot_emulator_generate_messages_py: robot_emulator/CMakeFiles/robot_emulator_generate_messages_py
-robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
-robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
-robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
-robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
-robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
-robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py
-robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py
+robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_BootResponse.py
+robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Error.py
+robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Output.py
+robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Input.py
+robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/_Request.py
+robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/msg/__init__.py
+robot_emulator_generate_messages_py: /home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator/srv/__init__.py
 robot_emulator_generate_messages_py: robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/build.make
 .PHONY : robot_emulator_generate_messages_py
 
@@ -119,10 +119,10 @@ robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/build: robot_e
 .PHONY : robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/build
 
 robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/clean:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && $(CMAKE_COMMAND) -P CMakeFiles/robot_emulator_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && $(CMAKE_COMMAND) -P CMakeFiles/robot_emulator_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/clean
 
 robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/depend:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRos/src /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator /home/ed/Dropbox/GitHub/simpleRos/build /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRosG/src /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator /home/ed/Dropbox/GitHub/simpleRosG/build /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_emulator/CMakeFiles/robot_emulator_generate_messages_py.dir/depend
 

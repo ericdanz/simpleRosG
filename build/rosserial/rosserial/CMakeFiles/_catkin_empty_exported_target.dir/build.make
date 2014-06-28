@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRos/src
+CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRosG/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRos/build
+CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRosG/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -56,10 +56,10 @@ rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_
 .PHONY : rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRos/src /home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial /home/ed/Dropbox/GitHub/simpleRos/build /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial /home/ed/Dropbox/GitHub/simpleRos/build/rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRosG/src /home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial /home/ed/Dropbox/GitHub/simpleRosG/build /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial /home/ed/Dropbox/GitHub/simpleRosG/build/rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

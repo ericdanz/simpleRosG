@@ -1,10 +1,10 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/robot_emulator_generate_messages_lisp"
-  "/home/ed/Dropbox/GitHub/simpleRos/devel/share/common-lisp/ros/robot_emulator/msg/BootResponse.lisp"
-  "/home/ed/Dropbox/GitHub/simpleRos/devel/share/common-lisp/ros/robot_emulator/msg/Request.lisp"
-  "/home/ed/Dropbox/GitHub/simpleRos/devel/share/common-lisp/ros/robot_emulator/msg/Error.lisp"
-  "/home/ed/Dropbox/GitHub/simpleRos/devel/share/common-lisp/ros/robot_emulator/msg/Output.lisp"
-  "/home/ed/Dropbox/GitHub/simpleRos/devel/share/common-lisp/ros/robot_emulator/msg/Input.lisp"
+  "/home/ed/Dropbox/GitHub/simpleRosG/devel/share/common-lisp/ros/robot_emulator/msg/BootResponse.lisp"
+  "/home/ed/Dropbox/GitHub/simpleRosG/devel/share/common-lisp/ros/robot_emulator/msg/Error.lisp"
+  "/home/ed/Dropbox/GitHub/simpleRosG/devel/share/common-lisp/ros/robot_emulator/msg/Output.lisp"
+  "/home/ed/Dropbox/GitHub/simpleRosG/devel/share/common-lisp/ros/robot_emulator/msg/Input.lisp"
+  "/home/ed/Dropbox/GitHub/simpleRosG/devel/share/common-lisp/ros/robot_emulator/msg/Request.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

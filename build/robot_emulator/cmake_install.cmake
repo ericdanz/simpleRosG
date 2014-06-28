@@ -1,8 +1,8 @@
-# Install script for directory: /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator
+# Install script for directory: /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/ed/Dropbox/GitHub/simpleRos/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/ed/Dropbox/GitHub/simpleRosG/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,50 +34,50 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator/msg" TYPE FILE FILES
-    "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg"
-    "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg"
-    "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg"
-    "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg"
-    "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg"
+    "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg"
+    "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg"
+    "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg"
+    "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg"
+    "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator/cmake" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator/catkin_generated/installspace/robot_emulator-msg-paths.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator/cmake" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator/catkin_generated/installspace/robot_emulator-msg-paths.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ed/Dropbox/GitHub/simpleRos/devel/include/robot_emulator")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ed/Dropbox/GitHub/simpleRosG/devel/include/robot_emulator")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ed/Dropbox/GitHub/simpleRos/devel/share/common-lisp/ros/robot_emulator")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ed/Dropbox/GitHub/simpleRosG/devel/share/common-lisp/ros/robot_emulator")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/ed/Dropbox/GitHub/simpleRos/devel/lib/python2.7/dist-packages/robot_emulator")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/ed/Dropbox/GitHub/simpleRosG/devel/lib/python2.7/dist-packages/robot_emulator")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator/catkin_generated/installspace/robot_emulator.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator/catkin_generated/installspace/robot_emulator.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator/cmake" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator/catkin_generated/installspace/robot_emulator-msg-extras.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator/cmake" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator/catkin_generated/installspace/robot_emulator-msg-extras.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator/cmake" TYPE FILE FILES
-    "/home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator/catkin_generated/installspace/robot_emulatorConfig.cmake"
-    "/home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator/catkin_generated/installspace/robot_emulatorConfig-version.cmake"
+    "/home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator/catkin_generated/installspace/robot_emulatorConfig.cmake"
+    "/home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator/catkin_generated/installspace/robot_emulatorConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_emulator" TYPE FILE FILES "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

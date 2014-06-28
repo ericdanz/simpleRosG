@@ -6,7 +6,63 @@
 
 #IncludeRegexTransform: 
 
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/AsyncOkPoll.h
+/home/ed/Dropbox/GitHub/simpleRosG/devel/include/rosserial_msgs/RequestMessageInfo.h
+ros/service_traits.h
+-
+rosserial_msgs/RequestMessageInfoRequest.h
+-
+rosserial_msgs/RequestMessageInfoResponse.h
+-
+
+/home/ed/Dropbox/GitHub/simpleRosG/devel/include/rosserial_msgs/RequestMessageInfoRequest.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/ed/Dropbox/GitHub/simpleRosG/devel/include/rosserial_msgs/RequestMessageInfoResponse.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/ed/Dropbox/GitHub/simpleRosG/devel/include/rosserial_msgs/TopicInfo.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/AsyncOkPoll.h
 boost/bind.hpp
 -
 boost/asio.hpp
@@ -14,7 +70,7 @@ boost/asio.hpp
 boost/function.hpp
 -
 
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/AsyncReadBuffer.h
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/AsyncReadBuffer.h
 boost/bind.hpp
 -
 boost/asio.hpp
@@ -24,7 +80,7 @@ boost/function.hpp
 ros/ros.h
 -
 
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/Session.h
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/Session.h
 map
 -
 boost/bind.hpp
@@ -42,11 +98,11 @@ topic_tools/shape_shifter.h
 std_msgs/Time.h
 -
 AsyncReadBuffer.h
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/AsyncReadBuffer.h
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/AsyncReadBuffer.h
 topic_handlers.h
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/topic_handlers.h
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/topic_handlers.h
 
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/serial_node.cpp
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/serial_node.cpp
 iostream
 -
 boost/bind.hpp
@@ -56,11 +112,11 @@ boost/asio.hpp
 ros/ros.h
 -
 Session.h
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/Session.h
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/Session.h
 AsyncOkPoll.h
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/AsyncOkPoll.h
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/AsyncOkPoll.h
 
-/home/ed/Dropbox/GitHub/simpleRos/src/rosserial/rosserial_server/src/topic_handlers.h
+/home/ed/Dropbox/GitHub/simpleRosG/src/rosserial/rosserial_server/src/topic_handlers.h
 ros/ros.h
 -
 rosserial_msgs/TopicInfo.h

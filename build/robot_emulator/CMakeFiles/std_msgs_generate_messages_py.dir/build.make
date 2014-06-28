@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRos/src
+CMAKE_SOURCE_DIR = /home/ed/Dropbox/GitHub/simpleRosG/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRos/build
+CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRosG/build
 
 # Utility rule file for std_msgs_generate_messages_py.
 
@@ -56,10 +56,10 @@ robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/build: std_msgs_gene
 .PHONY : robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/build
 
 robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/depend:
-	cd /home/ed/Dropbox/GitHub/simpleRos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRos/src /home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator /home/ed/Dropbox/GitHub/simpleRos/build /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator /home/ed/Dropbox/GitHub/simpleRos/build/robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ed/Dropbox/GitHub/simpleRosG/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ed/Dropbox/GitHub/simpleRosG/src /home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator /home/ed/Dropbox/GitHub/simpleRosG/build /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator /home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_emulator/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 

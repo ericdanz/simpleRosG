@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/ed/Dropbox/GitHub/simpleRos/src
-# Build directory: /home/ed/Dropbox/GitHub/simpleRos/build
+# Source directory: /home/ed/Dropbox/GitHub/simpleRosG/src
+# Build directory: /home/ed/Dropbox/GitHub/simpleRosG/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

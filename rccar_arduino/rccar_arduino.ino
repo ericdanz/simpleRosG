@@ -31,36 +31,43 @@ void loop() {
    if(Serial.available() > 0) {
 		//add new input bytes
 		inByte = Serial.read();
-		while((33 > inByte) || (inByte > 125))
-		{
-			inByte = Serial.read();
-		}
+		//while((33 > inByte) || (inByte > 125))
+		//{
+		//	inByte = Serial.read();
+		//}
 		char byteChar = inByte;
+                //Serial.print(byteChar);
                 //Serial.println(inByte);
                 //Serial.println(byteChar);
 		inputString += byteChar;
 		//if we have reached the final character
 		if(byteChar == '#'){
 			//check what the input string was
-      
+                        //Serial.println(inputString);
 			isError = respondToInput(inputString);  
 			if (isError){
-			  Serial.println("ERROR");
+			  Serial.print("#ERROR#");
+                          
 			}
                         else {
-                           Serial.println('Input Accepted');
+                          //String outputString = "#complete#";
+                          //Serial.print("#this is it#");
+                          Serial.flush();
+                         
                         }
 			inputString = "";
                  
 		}
-   }  
+   } 
+   
 }
 
 
 int respondToInput(String inString){
     if (inString.charAt(0) == 'b'){
        //Boot Response
-       Serial.println("locomotion");
+       Serial.println("#locomotion#");
+       
     }
     else if (inString.charAt(0) == 'i'){
        //Break this out into a separate function at some point
@@ -101,8 +108,7 @@ int respondToInput(String inString){
        if(az > 0){
           motor4.setSpeed(az);
           motor4.run(FORWARD);
-	  delay(1000);
-	  motor4.run(RELEASE);
+	  
        }
       
        else if(az < 0){
@@ -139,9 +145,13 @@ int respondToInput(String inString){
           motor2.run(RELEASE);
  
        }
-
+    Serial.print("#");
+    Serial.print(lx);
+    Serial.print("#");
+    Serial.println(az);
     }
-
+  
   return 0;
 }
+
 

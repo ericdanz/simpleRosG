@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/rosserial_arduino_generate_messages_cpp"
-  "/home/ed/Dropbox/GitHub/simpleRos/devel/include/rosserial_arduino/Adc.h"
-  "/home/ed/Dropbox/GitHub/simpleRos/devel/include/rosserial_arduino/Test.h"
+  "/home/ed/Dropbox/GitHub/simpleRosG/devel/include/rosserial_arduino/Adc.h"
+  "/home/ed/Dropbox/GitHub/simpleRosG/devel/include/rosserial_arduino/Test.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -328,10 +328,10 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
 
 //Value Computed by CMake
-robot_emulator_BINARY_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator_too
+robot_emulator_BINARY_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/build/robot_emulator
 
 //Value Computed by CMake
-robot_emulator_SOURCE_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator_too
+robot_emulator_SOURCE_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake

@@ -6,14 +6,14 @@ import struct
 
 
 class BootResponse(genpy.Message):
-  _md5sum = "7ed1ea0cf1ef59caf9b63d3b9f5a8f15"
+  _md5sum = "67c9310323a0ac0f1d0138ae96965614"
   _type = "robot_emulator/BootResponse"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """int64 modulenumber
-string moduletype
+  _full_text = """int64 gatenumber
+string gatetype
 
 """
-  __slots__ = ['modulenumber','moduletype']
+  __slots__ = ['gatenumber','gatetype']
   _slot_types = ['int64','string']
 
   def __init__(self, *args, **kwds):
@@ -24,7 +24,7 @@ string moduletype
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       modulenumber,moduletype
+       gatenumber,gatetype
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -33,13 +33,13 @@ string moduletype
     if args or kwds:
       super(BootResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.modulenumber is None:
-        self.modulenumber = 0
-      if self.moduletype is None:
-        self.moduletype = ''
+      if self.gatenumber is None:
+        self.gatenumber = 0
+      if self.gatetype is None:
+        self.gatetype = ''
     else:
-      self.modulenumber = 0
-      self.moduletype = ''
+      self.gatenumber = 0
+      self.gatetype = ''
 
   def _get_types(self):
     """
@@ -53,8 +53,8 @@ string moduletype
     :param buff: buffer, ``StringIO``
     """
     try:
-      buff.write(_struct_q.pack(self.modulenumber))
-      _x = self.moduletype
+      buff.write(_struct_q.pack(self.gatenumber))
+      _x = self.gatetype
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -75,16 +75,16 @@ string moduletype
       end = 0
       start = end
       end += 8
-      (self.modulenumber,) = _struct_q.unpack(str[start:end])
+      (self.gatenumber,) = _struct_q.unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
       end += length
       if python3:
-        self.moduletype = str[start:end].decode('utf-8')
+        self.gatetype = str[start:end].decode('utf-8')
       else:
-        self.moduletype = str[start:end]
+        self.gatetype = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -97,8 +97,8 @@ string moduletype
     :param numpy: numpy python module
     """
     try:
-      buff.write(_struct_q.pack(self.modulenumber))
-      _x = self.moduletype
+      buff.write(_struct_q.pack(self.gatenumber))
+      _x = self.gatetype
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -120,16 +120,16 @@ string moduletype
       end = 0
       start = end
       end += 8
-      (self.modulenumber,) = _struct_q.unpack(str[start:end])
+      (self.gatenumber,) = _struct_q.unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
       end += length
       if python3:
-        self.moduletype = str[start:end].decode('utf-8')
+        self.gatetype = str[start:end].decode('utf-8')
       else:
-        self.moduletype = str[start:end]
+        self.gatetype = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill

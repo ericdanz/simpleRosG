@@ -89,10 +89,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-   LIBRARIES robot_emulator
-   CATKIN_DEPENDS roscpp rospy std_msgs
-   DEPENDS system_lib
-   DEPENDS message_runtime
+   LIBRARIES robot_emulator_too
+   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+#   DEPENDS system_lib
+#   DEPENDS message_runtime
 )
 
 ###########

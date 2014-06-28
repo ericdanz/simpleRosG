@@ -2,7 +2,7 @@
 
 message(STATUS "robot_emulator: 5 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irobot_emulator:/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -15,29 +15,29 @@ add_custom_target(robot_emulator_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
 add_custom_target(_robot_emulator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg" ""
 )
 
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg" NAME_WE)
 add_custom_target(_robot_emulator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg" ""
 )
 
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg" NAME_WE)
 add_custom_target(_robot_emulator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg" ""
 )
 
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg" NAME_WE)
 add_custom_target(_robot_emulator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg" ""
 )
 
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg" NAME_WE)
 add_custom_target(_robot_emulator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot_emulator" "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg" ""
 )
 
 #
@@ -47,31 +47,31 @@ add_custom_target(_robot_emulator_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_cpp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_cpp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_cpp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_cpp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot_emulator
@@ -91,15 +91,15 @@ add_custom_target(robot_emulator_generate_messages_cpp
 add_dependencies(robot_emulator_generate_messages robot_emulator_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_cpp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_cpp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_cpp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_cpp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_cpp _robot_emulator_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -112,31 +112,31 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robot_emulator_generate_messages_cp
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_lisp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_lisp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_lisp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_lisp(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot_emulator
@@ -156,15 +156,15 @@ add_custom_target(robot_emulator_generate_messages_lisp
 add_dependencies(robot_emulator_generate_messages robot_emulator_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_lisp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_lisp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_lisp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_lisp _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_lisp _robot_emulator_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -177,31 +177,31 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robot_emulator_generate_messages_li
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_py(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_py(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_py(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot_emulator
 )
 _generate_msg_py(robot_emulator
-  "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg"
+  "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot_emulator
@@ -221,15 +221,15 @@ add_custom_target(robot_emulator_generate_messages_py
 add_dependencies(robot_emulator_generate_messages robot_emulator_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/BootResponse.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_py _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Request.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Error.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_py _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Error.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Output.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_py _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Output.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Input.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_py _robot_emulator_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRos/src/robot_emulator/msg/Input.msg" NAME_WE)
+get_filename_component(_filename "/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator/msg/Request.msg" NAME_WE)
 add_dependencies(robot_emulator_generate_messages_py _robot_emulator_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

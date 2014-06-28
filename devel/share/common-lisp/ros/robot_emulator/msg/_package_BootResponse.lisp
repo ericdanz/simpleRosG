@@ -1,6 +1,6 @@
 (cl:in-package robot_emulator-msg)
-(cl:export '(MODULENUMBER-VAL
-          MODULENUMBER
-          MODULETYPE-VAL
-          MODULETYPE
+(cl:export '(GATENUMBER-VAL
+          GATENUMBER
+          GATETYPE-VAL
+          GATETYPE
 ))

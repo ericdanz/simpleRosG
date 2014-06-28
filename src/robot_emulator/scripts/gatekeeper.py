@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from robot_emulator_too.msg import *
+from robot_emulator.msg import *
 from gatemodel import *
 from geometry_msgs.msg import Twist
 import rospy
@@ -8,7 +8,7 @@ import sys
 import time
 
 fakeTwist = Twist()
-#fakeTwist.linear.x = 100
+fakeTwist.linear.x = 100
 fakeTwist.angular.z = 250
 
 class Gatekeeper:
@@ -28,7 +28,8 @@ class Gatekeeper:
 	def buildModel(self,data):
 		rospy.loginfo("*"+data.gatetype+"*")
 		#make sure gatetype conforms to known types before creating a gate model
-		if data.gatetype == 'locomotion':	
+		if data.gatetype == 'locomotion':
+			print 'its locomotion'	
 			gmodel = GateModel(data.gatetype,data.gatenumber)		
 			self.gkmodel.addgate(gmodel)
 			#this is a hack to send a Twist and test the system
@@ -52,14 +53,30 @@ class Gatekeeper:
 	def sendInput(self,gate,mInput):
 		if gate.gtype == 'locomotion':
 			lInPub = rospy.Publisher('locomotionInputs', Twist, queue_size=2, latch=True)
-			#clear the pipes
+
+
+			#run a while for debugging
+			while(True):
+				newLInput = Twist()
+				rospy.loginfo("Sending Loc Input")
+				lInPub.publish(newLInput)
+				lInPub.publish(newLInput)
+				thisLInput = Twist()
+				time.sleep(7)
+
+				thisLInput = mInput
+				rospy.loginfo("Sending Loc Input")
+				lInPub.publish(thisLInput)
+				time.sleep(7)
 			'''
+			#clear the pipes
+			
 			newLInput = Twist()
 			rospy.loginfo("Sending Loc Input")
 			lInPub.publish(newLInput)
 			lInPub.publish(newLInput)
 			thisLInput = Twist()
-			'''
+			
 
 			#should probably be a try or something here
 			thisLInput = mInput
@@ -71,6 +88,7 @@ class Gatekeeper:
 			newLInput = Twist()
 			rospy.loginfo("Sending Loc Input")
 			lInPub.publish(newLInput)
+			'''
 
 
 if __name__ == '__main__':

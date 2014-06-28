@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from robot_emulator_too.msg import *
+from robot_emulator.msg import *
 from modulemodel import *
 import moduleconnection as mc
 from geometry_msgs.msg import Twist
@@ -17,9 +17,7 @@ class Gate:
 		self.number = gnumber
 		self.module = Module()
 		#is gnumber going to be port number as well?
-		self.module.settype( mc.bootModule(gnumber) )	
-		if (self.module.settype == "locomotion"):
-			rospy.Subscriber('locomotionInputs', Twist, self.doInput)
+			
 		
 	def parseReq(self,data):
 		rospy.loginfo('this is parse Req')
@@ -27,13 +25,38 @@ class Gate:
 		if thisReq == 'boot':
 			rospy.loginfo(thisReq)
 			self.bootResponder()
+			#send out what we are, then subscribe to the proper channel for inputs after a pause
+			#so that gatekeeper can catch up
+			#time.sleep(1)
+			if (self.module.mtype == "locomotion"):
+				print 'gate is locomotion'
+				rospy.Subscriber('locomotionInputs', Twist, self.doInput)
+			#set up elifs eventually
+			#else:
+			#	print "didn't get the type{}".format(mc.readunreliable('b#',self.number))
+			
+	def bootResponder(self):
+		rospy.loginfo('inside boot responder')
+		self.module.settype( mc.bootModule(self.number) )
+		print self.module.mtype
+		bootPub = rospy.Publisher('boot', BootResponse, queue_size=1, latch=True)
+		#need a name inside the boot message, so this module will
+		#be able to identify messages sent to itself
+		bootString = BootResponse()
+		bootString.gatenumber = self.number
+		#self.number
+		bootString.gatetype = self.module.mtype
+		bootPub.publish(bootString)
 
 	def doInput(self,data):
 		#check the name on the input, if it matches this module
 		#do the input if possible or publish an error
 		
+	
+		#inputs will become custom type - gatenumber, gatetype, and Twist
+	
  		#will add gate names later
-
+		print 'at input'
 		inputString = 'i/lx:{},ly:{},lz{}/ax:{},ay:{},az:{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
 		outString = mc.readunreliable(inputString, self.number)
 
@@ -41,6 +64,6 @@ class Gate:
 
 if __name__ == '__main__':
 	rospy.init_node('gate', anonymous=True)
-	gate = Gate(0)
+	gate = Gate(6)
 	rospy.loginfo("Gate Node Started")
 	rospy.spin()
