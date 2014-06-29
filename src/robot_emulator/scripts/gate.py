@@ -52,18 +52,20 @@ class Gate:
 		#check the name on the input, if it matches this module
 		#do the input if possible or publish an error
 		
-	
 		#inputs will become custom type - gatenumber, gatetype, and Twist
 	
  		#will add gate names later
 		print 'at input'
-		inputString = 'i/lx:{},ly:{},lz{}/ax:{},ay:{},az:{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
+		#need more efficiency - only numbers transmitted
+		#format is lx,ly,lz/ax,ay,az
+		inputString = 'i/{},{},{}/{},{},{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
+		print 'instring {}'.format(inputString)
 		outString = mc.readunreliable(inputString, self.number)
 
 		
 
 if __name__ == '__main__':
 	rospy.init_node('gate', anonymous=True)
-	gate = Gate(6)
+	gate = Gate(2)
 	rospy.loginfo("Gate Node Started")
 	rospy.spin()

@@ -52,7 +52,7 @@ class Gatekeeper:
 	
 	def sendInput(self,gate,mInput):
 		if gate.gtype == 'locomotion':
-			lInPub = rospy.Publisher('locomotionInputs', Twist, queue_size=2, latch=True)
+			lInPub = rospy.Publisher('locomotionInputs', Twist, queue_size=1, latch=True)
 
 
 			#run a while for debugging
@@ -62,14 +62,14 @@ class Gatekeeper:
 				lInPub.publish(newLInput)
 				lInPub.publish(newLInput)
 				thisLInput = Twist()
-				time.sleep(7)
+				time.sleep(3)
 
 				thisLInput = mInput
 				rospy.loginfo("Sending Loc Input")
 				lInPub.publish(thisLInput)
-				time.sleep(7)
-			'''
-			#clear the pipes
+				time.sleep(3)
+			'''		
+	#clear the pipes
 			
 			newLInput = Twist()
 			rospy.loginfo("Sending Loc Input")

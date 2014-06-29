@@ -12,7 +12,7 @@ AF_DCMotor motor4(4);
 
 void setup() {
 
-  Serial.begin(9600);
+  Serial.begin(38400);
 
   motor1.setSpeed(200);
   motor1.run(RELEASE);
@@ -31,14 +31,7 @@ void loop() {
    if(Serial.available() > 0) {
 		//add new input bytes
 		inByte = Serial.read();
-		//while((33 > inByte) || (inByte > 125))
-		//{
-		//	inByte = Serial.read();
-		//}
 		char byteChar = inByte;
-                //Serial.print(byteChar);
-                //Serial.println(inByte);
-                //Serial.println(byteChar);
 		inputString += byteChar;
 		//if we have reached the final character
 		if(byteChar == '#'){
@@ -52,7 +45,7 @@ void loop() {
                         else {
                           //String outputString = "#complete#";
                           //Serial.print("#this is it#");
-                          Serial.flush();
+                          
                          
                         }
 			inputString = "";
@@ -82,26 +75,26 @@ int respondToInput(String inString){
        int firstComma = linear.indexOf(',');
        int secondComma = linear.indexOf(',', firstComma+1);
        
-       String lxS = linear.substring(0, firstComma);
-       String lyS = linear.substring(firstComma + 1, secondComma);
-       String lzS = linear.substring(secondComma + 1);
+       int lx = linear.substring(0, firstComma).toInt();
+       int ly = linear.substring(firstComma + 1, secondComma).toInt();
+       int lz = linear.substring(secondComma + 1).toInt();
 
        
        firstComma = angular.indexOf(',');
        secondComma = angular.indexOf(',', firstComma+1);
        
-       String axS = angular.substring(0, firstComma);
-       String ayS = angular.substring(firstComma + 1, secondComma);
-       String azS = angular.substring(secondComma + 1);
+       int ax = angular.substring(0, firstComma).toInt();
+       int ay = angular.substring(firstComma + 1, secondComma).toInt();
+       int az = angular.substring(secondComma + 1).toInt();
+	/*
+       int lx = lxS.toInt();
+       int ly = lyS.toInt();
+       int lz = lzS.toInt();
 
-       int lx = lxS.substring(3).toInt();
-       int ly = lyS.substring(3).toInt();
-       int lz = lzS.substring(3).toInt();
-
-       int ax = axS.substring(3).toInt(); 
-       int ay = ayS.substring(3).toInt();
-       int az = azS.substring(3).toInt();
-
+       int ax = axS.toInt(); 
+       int ay = ayS.toInt();
+       int az = azS.toInt();
+	*/
        //only uses two values, linear.x and angular.z
  
        //turn the wheel before changing speed
@@ -145,10 +138,11 @@ int respondToInput(String inString){
           motor2.run(RELEASE);
  
        }
-    Serial.print("#");
+    Serial.print("#x-");
     Serial.print(lx);
-    Serial.print("#");
-    Serial.println(az);
+    Serial.print("z-");
+    Serial.print(az);
+    Serial.println("#");
     }
   
   return 0;
