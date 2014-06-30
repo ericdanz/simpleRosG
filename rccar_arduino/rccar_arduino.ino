@@ -6,6 +6,11 @@ String inputString;
 int isError;
 int inByte;
 char byteChar;
+char byteCharOne;
+char byteCharTwo;
+
+int initial;
+int final;
 
 int ax = 0;
 int ay = 0;
@@ -37,12 +42,16 @@ void setup() {
 
 
 void loop() {
+  
+  respondToSerial();
+  /*
     if(Serial.available() > 0) {
 		//add new input bytes
 		inByte = Serial.read();
                 while(33 > inByte || inByte > 125){
                  inByte = Serial.read();
                 }
+                */
                 /*
                 char* inputB;
                 int readinto = Serial.readBytesUntil('#',inputB, 30);
@@ -50,6 +59,7 @@ void loop() {
 		inputString = String(inputB);
                 Serial.println(inputString);
                 */
+                /*
                 byteChar = inByte; 
                 inputString += byteChar;
                 //if we have reached the final character
@@ -72,16 +82,122 @@ void loop() {
 			}
                        inputString = "";
 		  }  //part of that if
+
                 
 		
    } 
-   
+*/   
    //Keep motors running
    //resetMotors();
    
    
 }
 
+void respondToSerial(){
+   initial = 0;
+   final = 0;
+  
+  if (Serial.available() > 0){
+    byteChar = Serial.read();
+    
+    if(byteChar == 'b') { //if the request is for a boot and
+     initial = micros(); 
+      delay(10);
+       if (Serial.read() == '#') { //if the next character is the end char
+         Serial.println('l'); //Print the boot response
+         final = micros();
+         Serial.println(final-initial);
+       }
+    } 
+    else if (byteChar == 'i'){
+      initial = micros();
+      delay(10);
+    if (Serial.read() == '/'){ //it is an input
+      byteChar = Serial.read();
+      int temp;
+      int value;
+      
+      while(byteChar != ','){
+        temp = byteChar - '0';
+        value = 10*value + temp;
+        byteChar = Serial.read();
+      }
+      
+      lx = value;
+      temp = 0;
+      value = 0;
+      byteChar = Serial.read();
+      
+      while(byteChar != ','){
+        temp = byteChar - '0';
+        value = 10*value + temp;
+        byteChar = Serial.read();
+      }
+      ly = value;
+      temp = 0;
+      value = 0;
+       byteChar = Serial.read();
+      
+      while(byteChar != '/'){
+        temp = byteChar - '0';
+        value = 10*value + temp;
+        byteChar = Serial.read();
+      }
+      lz = value;
+      temp = 0;
+      value = 0;
+       byteChar = Serial.read();
+      
+      while(byteChar != ','){
+        temp = byteChar - '0';
+        value = 10*value + temp;
+        byteChar = Serial.read();
+      }
+      ax = value;
+      temp = 0;
+      value = 0;
+       byteChar = Serial.read();
+      
+      while(byteChar != ','){
+        temp = byteChar - '0';
+        value = 10*value + temp;
+        byteChar = Serial.read();
+      }
+      ay = value;
+      temp = 0;
+      value = 0;
+       byteChar = Serial.read();
+      
+      while(byteChar != '#'){
+        temp = byteChar - '0';
+        value = 10*value + temp;
+        byteChar = Serial.read();
+      }
+      az = value;
+      temp = 0;
+      value = 0;
+      // byteChar = Serial.read();
+       
+       resetMotors();
+         final = micros();
+         Serial.println(final-initial);
+         delay(100);
+         Serial.println("");
+         Serial.println(lx);
+         Serial.println(ly);
+         Serial.println(lz);
+         Serial.println(ax);
+         Serial.println(ay);
+         Serial.println(az);
+         
+            
+            
+    }
+    }   
+  }
+  
+  
+}
 
 void resetMotors(){
    if(az > 0){
@@ -128,7 +244,8 @@ void resetMotors(){
 }
 
 int respondToInput(String inString){
-    if (inString.charAt(0) == 'b'){
+    int initial = micros();
+    if (inString.charAt(0) == 'b'){ 
        //Boot Response
        Serial.print("l");
        
@@ -136,15 +253,15 @@ int respondToInput(String inString){
     else if (inString.charAt(0) == 'i'){
        //Break this out into a separate function at some point
        //This recreates a twist, eventually
-       /*
+       
        int endS = inString.indexOf("#");
        int firstComma = inString.indexOf(',');
        lx = inString.substring(2,firstComma).toInt();
        az = inString.substring(firstComma + 1, endS).toInt();
        
-       */
        
        
+       /*
        int endS = inString.indexOf("#");
        int firstSlash = inString.indexOf('/');
        int secondSlash = inString.indexOf('/',firstSlash + 1);
@@ -166,7 +283,7 @@ int respondToInput(String inString){
        ax = angular.substring(0, firstComma).toInt();
        ay = angular.substring(firstComma + 1, secondComma).toInt();
        az = angular.substring(secondComma + 1).toInt();
-       
+       */
 	/*
        int lx = lxS.toInt();
        int ly = lyS.toInt();
@@ -191,6 +308,9 @@ int respondToInput(String inString){
     return 1;
   }
   resetMotors();
+  int final = micros();
+  Serial.print(" ");
+  Serial.println(final-initial);
   return 0;
 }
 
