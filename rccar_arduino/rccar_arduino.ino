@@ -36,7 +36,7 @@ void setup() {
     
   motor4.setSpeed(200);
   motor4.run(RELEASE);
-  delay(1000);
+ 
 
 }
 

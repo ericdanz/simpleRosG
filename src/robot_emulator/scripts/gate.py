@@ -59,7 +59,7 @@ class Gate:
 		#print 'at input'
 		#need more efficiency - only numbers transmitted
 		#format is lx,ly,lz/ax,ay,az
-		inputString = 'i/{},{},{}/{},{},{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
+		inputString = '!i/{},{},{}/{},{},{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
 		#inputString = 'i/{},{}#'.format(data.linear.x, data.angular.z)
 		#print 'instring {}'.format(inputString)
 		print mc.readunreliable(inputString, self.number)

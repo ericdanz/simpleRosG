@@ -53,8 +53,8 @@ def sendblind(instring, port):
 	
 def bootModule(port):
 	#mod = modulemodel.Module()
-	sendblind('#',port)
-	bootresponse = readunreliable('b#',port)
+	sendblind('!#',port)
+	bootresponse = readunreliable('!b#',port)
 	if bootresponse!='error':
 		print 'bootresp{}'.format(bootresponse)
 		return bootresponse
