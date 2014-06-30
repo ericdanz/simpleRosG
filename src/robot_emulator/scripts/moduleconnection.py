@@ -5,7 +5,7 @@ import multiprocessing
 def readunreliable(instring, port):
 	port = '/dev/ttyACM{}'.format(port)
 	#might need to switch back to 19200, if this stacks too much on the input buffer on the arduino
-	ser1 = serial.Serial(port, baudrate=38400, timeout=2)
+	ser1 = serial.Serial(port, baudrate=57600, timeout=2)
 	#ser1.write("#")
 	#time.sleep(1)
 	for timesrun in xrange(3):

@@ -12,7 +12,7 @@ AF_DCMotor motor4(4);
 
 void setup() {
 
-  Serial.begin(38400);
+  Serial.begin(57600);
 
   motor1.setSpeed(200);
   motor1.run(RELEASE);
@@ -39,13 +39,13 @@ void loop() {
                         //Serial.println(inputString);
 			isError = respondToInput(inputString);  
 			if (isError){
-			  Serial.print("#ERROR#");
+			  Serial.println("#-#");
                           
 			}
                         else {
                           //String outputString = "#complete#";
                           //Serial.print("#this is it#");
-                          
+                          Serial.println("#+#");
                          
                         }
 			inputString = "";
@@ -59,7 +59,7 @@ void loop() {
 int respondToInput(String inString){
     if (inString.charAt(0) == 'b'){
        //Boot Response
-       Serial.println("#locomotion#");
+       Serial.println("#loc#");
        
     }
     else if (inString.charAt(0) == 'i'){
@@ -142,7 +142,7 @@ int respondToInput(String inString){
     Serial.print(lx);
     Serial.print("z-");
     Serial.print(az);
-    Serial.println("#");
+    Serial.print("#");
     }
   
   return 0;

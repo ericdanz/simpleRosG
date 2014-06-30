@@ -12,8 +12,7 @@ AF_DCMotor motor4(4);
 
 void setup() {
 
-  Serial.begin(38400);
-  Serial.flush();
+  Serial.begin(57600);
 
   motor1.setSpeed(200);
   motor1.run(RELEASE);
@@ -46,7 +45,7 @@ void loop() {
                         else {
                           //String outputString = "#complete#";
                           //Serial.print("#this is it#");
-                          Serial.flush();
+                          
                          
                         }
 			inputString = "";
@@ -139,10 +138,11 @@ int respondToInput(String inString){
           motor2.run(RELEASE);
  
        }
-    Serial.print("x-");
+    Serial.print("#x-");
     Serial.print(lx);
     Serial.print("z-");
-    Serial.println(az);
+    Serial.print(az);
+    Serial.println("#");
     }
   
   return 0;

@@ -37,7 +37,8 @@ class Gate:
 			
 	def bootResponder(self):
 		rospy.loginfo('inside boot responder')
-		self.module.settype( mc.bootModule(self.number) )
+		if ( mc.bootModule(self.number) == 'loc' ):
+			self.module.settype( "locomotion" )
 		print self.module.mtype
 		bootPub = rospy.Publisher('boot', BootResponse, queue_size=1, latch=True)
 		#need a name inside the boot message, so this module will
@@ -61,6 +62,7 @@ class Gate:
 		inputString = 'i/{},{},{}/{},{},{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
 		print 'instring {}'.format(inputString)
 		outString = mc.readunreliable(inputString, self.number)
+		
 
 		
 
