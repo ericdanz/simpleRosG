@@ -37,7 +37,7 @@ class Gate:
 			
 	def bootResponder(self):
 		rospy.loginfo('inside boot responder')
-		if ( mc.bootModule(self.number) == 'loc' ):
+		if ( mc.bootModule(self.number) == 'l' ):
 			self.module.settype( "locomotion" )
 		print self.module.mtype
 		bootPub = rospy.Publisher('boot', BootResponse, queue_size=1, latch=True)
@@ -56,18 +56,18 @@ class Gate:
 		#inputs will become custom type - gatenumber, gatetype, and Twist
 	
  		#will add gate names later
-		print 'at input'
+		#print 'at input'
 		#need more efficiency - only numbers transmitted
 		#format is lx,ly,lz/ax,ay,az
 		inputString = 'i/{},{},{}/{},{},{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
-		print 'instring {}'.format(inputString)
-		outString = mc.readunreliable(inputString, self.number)
-		
-
+		#inputString = 'i/{},{}#'.format(data.linear.x, data.angular.z)
+		#print 'instring {}'.format(inputString)
+		print mc.readunreliable(inputString, self.number)
+		#mc.sendblind(inputString, self.number)
 		
 
 if __name__ == '__main__':
 	rospy.init_node('gate', anonymous=True)
-	gate = Gate(2)
+	gate = Gate(0)
 	rospy.loginfo("Gate Node Started")
 	rospy.spin()
