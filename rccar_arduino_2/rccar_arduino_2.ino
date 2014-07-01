@@ -179,10 +179,10 @@ void setMotors(){
   motor2.setSpeed(vectorArray[0]);
   motor2.run(RELEASE);
   }
-  
+  //Serial.flush();
  Serial.print('+');
  final = micros();
- Serial.print(final - initial);
+ //Serial.print(final - initial);
   
 }
 

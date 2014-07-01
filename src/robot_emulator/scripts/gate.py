@@ -6,7 +6,7 @@ import moduleconnection as mc
 from geometry_msgs.msg import Twist
 import rospy
 import sys
-import time
+import time, serial
 
 
 class Gate:
@@ -17,6 +17,8 @@ class Gate:
 		self.number = gnumber
 		self.module = Module()
 		#is gnumber going to be port number as well?
+		port = '/dev/ttyACM{}'.format(self.number)
+		self.serPer = serial.Serial(port, baudrate=57600, timeout=1)
 			
 		
 	def parseReq(self,data):
@@ -37,7 +39,7 @@ class Gate:
 			
 	def bootResponder(self):
 		rospy.loginfo('inside boot responder')
-		if ( mc.bootModule(self.number) == 'l' ):
+		if ( mc.bootModule(self.serPer) == 'l' ):
 			self.module.settype( "locomotion" )
 		print self.module.mtype
 		bootPub = rospy.Publisher('boot', BootResponse, queue_size=1, latch=True)
@@ -62,8 +64,8 @@ class Gate:
 		inputString = '!i/{},{},{}/{},{},{}#'.format(int(data.linear.x), int(data.linear.y), int(data.linear.z), int(data.angular.x), int(data.angular.y), int(data.angular.z))
 		#inputString = 'i/{},{}#'.format(data.linear.x, data.angular.z)
 		print 'instring {}'.format(inputString)
-		print mc.readunreliable(inputString, self.number)
-		#mc.sendblind(inputString, self.number)
+		mc.readunreliable(inputString, self.serPer)
+		#mc.sendblind(inputString, self.serPer)
 		
 
 if __name__ == '__main__':

@@ -62,12 +62,12 @@ class Gatekeeper:
 				lInPub.publish(newLInput)
 				lInPub.publish(newLInput)
 				thisLInput = Twist()
-				time.sleep(3)
+				time.sleep(1)
 
 				thisLInput = mInput
 				rospy.loginfo("Sending Loc Input")
 				lInPub.publish(thisLInput)
-				time.sleep(3)
+				time.sleep(1)
 			'''		
 	#clear the pipes
 			
