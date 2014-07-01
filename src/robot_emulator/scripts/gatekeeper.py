@@ -68,27 +68,7 @@ class Gatekeeper:
 				rospy.loginfo("Sending Loc Input")
 				lInPub.publish(thisLInput)
 				time.sleep(1)
-			'''		
-	#clear the pipes
 			
-			newLInput = Twist()
-			rospy.loginfo("Sending Loc Input")
-			lInPub.publish(newLInput)
-			lInPub.publish(newLInput)
-			thisLInput = Twist()
-			
-
-			#should probably be a try or something here
-			thisLInput = mInput
-			rospy.loginfo("Sending Loc Input")
-			lInPub.publish(thisLInput)
-
-			#then stop the motors
-			time.sleep(2)
-			newLInput = Twist()
-			rospy.loginfo("Sending Loc Input")
-			lInPub.publish(newLInput)
-			'''
 
 
 if __name__ == '__main__':
