@@ -35,7 +35,7 @@ class Gate:
 				rospy.Subscriber('locomotionInputs', Twist, self.doInput)
 			#set up elifs eventually
 			#else:
-			#	print "didn't get the type{}".format(mc.readunreliable('b#',self.number))
+			#	print "didn't get the type{}".format mc.readunreliable('b#',self.number))
 			
 	def bootResponder(self):
 		rospy.loginfo('inside boot responder')
@@ -64,7 +64,7 @@ class Gate:
 		inputString = '!i/{},{},{}/{},{},{}#'.format(int(data.linear.x), int(data.linear.y), int(data.linear.z), int(data.angular.x), int(data.angular.y), int(data.angular.z))
 		#inputString = 'i/{},{}#'.format(data.linear.x, data.angular.z)
 		print 'instring {}'.format(inputString)
-		mc.readunreliable(inputString, self.serPer)
+		print mc.readunreliable(inputString, self.serPer)
 		#mc.sendblind(inputString, self.serPer)
 		
 
