@@ -12,13 +12,6 @@ boolean storeString = false;
 int initial = 0;
 int final = 0;
 
-int ax = 0;
-int ay = 0;
-int az = 0;
-int lx = 0;
-int ly = 0;
-int lz = 0;
-
 int vectorArray[6];
 
 AF_DCMotor motor1(1);
@@ -46,18 +39,18 @@ void loop() {
   respondToSerial();
 }
 
+
+
 void resetDataBuffer(){
   dataBufferIndex = 0;
 }
 
+
 boolean getSerial(){
    
-    
     while(Serial.available()>0){
         char incomingbyte = Serial.read();
         if(incomingbyte==startChar){
-          //Serial.println("got incoming");
-          //Serial.println(endChar);
             dataBufferIndex = 0;  //Initialize our dataBufferIndex variable
             storeString = true;
         }
@@ -71,7 +64,6 @@ boolean getSerial(){
             }
             
             if( incomingbyte == endChar ){
-                //Serial.println("got end");
                 dataBuffer[dataBufferIndex] = incomingbyte; //null terminate the C string
                 dataBuffer[dataBufferIndex + 1] = 0;
                 //Our data string is complete.  return true
@@ -81,7 +73,6 @@ boolean getSerial(){
             else{
                 dataBuffer[dataBufferIndex++] = incomingbyte;
                 dataBuffer[dataBufferIndex] = 0; //null terminate the C string
-                //Serial.println(dataBuffer);
              }
         }
         else{
@@ -98,7 +89,6 @@ void sendBootResponse(){
 }
 
 void setMotors(){
-  //Serial.println("SETMOTORS");
   int tIndex = 3;
   int vIndex = 0;
   int temp = 0;
@@ -108,7 +98,6 @@ void setMotors(){
   boolean beginning = true;
   //while we aren't at the end of the string
   while (wChar != 0 ){
-    //Serial.println(wChar);
     if (wChar > 47 && wChar < 58) {
       //it is a number
       char tChar = wChar;
@@ -142,9 +131,7 @@ void setMotors(){
     
   }
   
-  //Serial.println(vectorArray[0]);
-  //Serial.println(vectorArray[5]);
- 
+  //The vector has the Twist values - lx through az, 0->5
   if (vectorArray[5] > 0){
   motor4.setSpeed(vectorArray[5]);
   motor4.run(FORWARD);
@@ -179,7 +166,6 @@ void setMotors(){
   motor2.setSpeed(vectorArray[0]);
   motor2.run(RELEASE);
   }
-  //Serial.flush();
  Serial.print('+');
  final = micros();
  //Serial.print(final - initial);
@@ -188,21 +174,17 @@ void setMotors(){
 
 void respondToSerial(){
   if(getSerial()){
-    //Serial.println("TRUE");
     if(dataBuffer[1] == 'b'){
       sendBootResponse();
-      
     }
     else if (dataBuffer[1] == 'i'){
       initial = micros();
       setMotors();
-      
     }
     else if (dataBuffer[1] == 'r'){
       resetFunc();
     }
   }
-  
 }
 
 
