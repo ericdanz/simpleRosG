@@ -59,15 +59,15 @@ class Gate:
 		#print 'at input'
 		#need more efficiency - only numbers transmitted
 		#format is lx,ly,lz/ax,ay,az
-		inputString = '!i/{},{},{}/{},{},{}#'.format(data.linear.x, data.linear.y, data.linear.z, data.angular.x, data.angular.y, data.angular.z)
+		inputString = '!i/{},{},{}/{},{},{}#'.format(int(data.linear.x), int(data.linear.y), int(data.linear.z), int(data.angular.x), int(data.angular.y), int(data.angular.z))
 		#inputString = 'i/{},{}#'.format(data.linear.x, data.angular.z)
-		#print 'instring {}'.format(inputString)
+		print 'instring {}'.format(inputString)
 		print mc.readunreliable(inputString, self.number)
 		#mc.sendblind(inputString, self.number)
 		
 
 if __name__ == '__main__':
 	rospy.init_node('gate', anonymous=True)
-	gate = Gate(0)
+	gate = Gate(1)
 	rospy.loginfo("Gate Node Started")
 	rospy.spin()
