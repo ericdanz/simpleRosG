@@ -5,11 +5,11 @@ import multiprocessing
 def readunreliable(instring, ser):
 	for timesrun in xrange(3):
 		ser.write(instring)
-		#time.sleep(.4)
 		repstring = ser.read()
 		if (repstring == '+' ) or (repstring == 'l'):
 			return repstring
-		
+		if (timesrun == 1):
+			ser.write("!r#")
 
 	return 'error'
 
@@ -19,7 +19,6 @@ def sendblind(instring, ser):
 
 	
 def bootModule(ser):
-	#mod = modulemodel.Module()
 	sendblind("!#",ser)
 	bootresponse = readunreliable('!b#',ser)
 	if bootresponse!='error':

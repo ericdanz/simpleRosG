@@ -5,15 +5,13 @@ from modulemodel import *
 import moduleconnection as mc
 from geometry_msgs.msg import Twist
 import rospy
-import sys
-import time, serial
+import time, serial, sys
+import messagetranslations as mt
 
 
 class Gate:
-
-	def __init__(self, gnumber=1):
+	def __init__(self, gnumber=0):
 		rospy.Subscriber('reqs', Request, self.parseReq)
-		#rospy.Subscriber('inputs', Input, self.doInput)
 		self.number = gnumber
 		self.module = Module()
 		#is gnumber going to be port number as well?
@@ -27,9 +25,6 @@ class Gate:
 		if thisReq == 'boot':
 			rospy.loginfo(thisReq)
 			self.bootResponder()
-			#send out what we are, then subscribe to the proper channel for inputs after a pause
-			#so that gatekeeper can catch up
-			#time.sleep(1)
 			if (self.module.mtype == "locomotion"):
 				print 'gate is locomotion'
 				rospy.Subscriber('locomotionInputs', Twist, self.doInput)
@@ -47,7 +42,6 @@ class Gate:
 		#be able to identify messages sent to itself
 		bootString = BootResponse()
 		bootString.gatenumber = self.number
-		#self.number
 		bootString.gatetype = self.module.mtype
 		bootPub.publish(bootString)
 
@@ -61,10 +55,10 @@ class Gate:
 		#print 'at input'
 		#need more efficiency - only numbers transmitted
 		#format is lx,ly,lz/ax,ay,az
-		inputString = '!i/{},{},{}/{},{},{}#'.format(int(data.linear.x), int(data.linear.y), int(data.linear.z), int(data.angular.x), int(data.angular.y), int(data.angular.z))
+		inputString = mt.makeLocInput(data)
 		#inputString = 'i/{},{}#'.format(data.linear.x, data.angular.z)
-		print 'instring {}'.format(inputString)
-		print mc.readunreliable(inputString, self.serPer)
+		rospy.loginfo('instring {}'.format(inputString))
+		rospy.loginfo( mc.readunreliable(inputString, self.serPer) )
 		#mc.sendblind(inputString, self.serPer)
 		
 

@@ -4,8 +4,7 @@ from robot_emulator.msg import *
 from gatemodel import *
 from geometry_msgs.msg import Twist
 import rospy
-import sys
-import time
+import sys, time
 
 fakeTwist = Twist()
 fakeTwist.linear.x = 100
