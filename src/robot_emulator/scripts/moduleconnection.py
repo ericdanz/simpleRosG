@@ -22,9 +22,7 @@ def bootModule(ser):
 	sendblind("!#",ser)
 	bootresponse = readunreliable('!b#',ser)
 	if bootresponse!='error':
-		print 'bootresp{}'.format(bootresponse)
 		return bootresponse
-	else:
-		print 'error\n'
+
 	return 'None'
 	
