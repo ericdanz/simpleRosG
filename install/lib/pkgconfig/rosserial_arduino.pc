@@ -2,7 +2,7 @@ prefix=/home/ed/Dropbox/GitHub/simpleRosG/install
 
 Name: rosserial_arduino
 Description: Description of rosserial_arduino
-Version: 0.6.0
+Version: 0.6.1
 Cflags: -I/home/ed/Dropbox/GitHub/simpleRosG/install/include
 Libs: -L/home/ed/Dropbox/GitHub/simpleRosG/install/lib 
 Requires: message_runtime

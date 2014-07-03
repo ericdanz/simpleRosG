@@ -5,4 +5,4 @@ PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "rosserial_server"
 PROJECT_SPACE_DIR = "/home/ed/Dropbox/GitHub/simpleRosG/install"
-PROJECT_VERSION = "0.6.0"
+PROJECT_VERSION = "0.6.1"

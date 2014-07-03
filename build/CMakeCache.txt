@@ -333,6 +333,12 @@ robot_emulator_BINARY_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/build/robot_
 //Value Computed by CMake
 robot_emulator_SOURCE_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/src/robot_emulator
 
+//Value Computed by CMake
+robot_rosserial_BINARY_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/build/robot_rosserial
+
+//Value Computed by CMake
+robot_rosserial_SOURCE_DIR:STATIC=/home/ed/Dropbox/GitHub/simpleRosG/src/robot_rosserial
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
 
@@ -441,7 +447,7 @@ Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/ed/Dropbox/GitHub/simpleRosG/build/catkin_generated/env_cached.sh
-CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/ed/Dropbox/GitHub/simpleRos/build/test_results
+CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/ed/Dropbox/GitHub/simpleRosG/build/test_results
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_BUILD_TOOL
@@ -516,7 +522,7 @@ CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Start directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/ed/Dropbox/GitHub/simpleRos/src
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/ed/Dropbox/GitHub/simpleRosG/src
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
@@ -536,7 +542,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=12
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

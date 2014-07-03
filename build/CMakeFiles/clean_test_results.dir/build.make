@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/ed/Dropbox/GitHub/simpleRosG/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/cmake -E remove_directory /home/ed/Dropbox/GitHub/simpleRos/build/test_results
+	/usr/bin/cmake -E remove_directory /home/ed/Dropbox/GitHub/simpleRosG/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make

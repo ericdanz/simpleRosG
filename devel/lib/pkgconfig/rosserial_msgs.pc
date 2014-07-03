@@ -2,7 +2,7 @@ prefix=/home/ed/Dropbox/GitHub/simpleRosG/devel
 
 Name: rosserial_msgs
 Description: Description of rosserial_msgs
-Version: 0.6.0
+Version: 0.6.1
 Cflags: -I/home/ed/Dropbox/GitHub/simpleRosG/devel/include
 Libs: -L/home/ed/Dropbox/GitHub/simpleRosG/devel/lib 
 Requires: message_runtime
