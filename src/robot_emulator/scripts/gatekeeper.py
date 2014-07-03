@@ -17,6 +17,7 @@ class Gatekeeper:
 		rospy.Subscriber('boot', BootResponse, self.buildModel)
 		rospy.Subscriber('outputs', Output, self.updateModel)
 		rospy.Subscriber('errors', Error, self.checkError)
+		rospy.Subscriber('cmd_vel', Twist, self.sendLocInput)
 
 		reqPub = rospy.Publisher('reqs', Request, queue_size=10, latch=True)
 		thisRequest = Request()
@@ -28,14 +29,13 @@ class Gatekeeper:
 		rospy.loginfo("*"+data.gatetype+"*")
 		#make sure gatetype conforms to known types before creating a gate model
 		if data.gatetype == 'locomotion':
-			print 'its locomotion'	
-			gmodel = GateModel(data.gatetype,data.gatenumber)		
+			rospy.loginfo('its locomotion')
+			gmodel = GateModel(data.gatetype,data.gatenumber)
 			self.gkmodel.addgate(gmodel)
-			#this is a hack to send a Twist and test the system
-			self.sendInput(gmodel,fakeTwist)
+
 		elif data.gatetype == 'sensor':
 			gmodel = GateModel(data.gatetype, data.gatenumber)
-			self.gkmodel.addgate(gmodel)		
+			self.gkmodel.addgate(gmodel)
 		print self.gkmodel
 
 	def updateModel(self,data):
@@ -45,29 +45,26 @@ class Gatekeeper:
 		pass
 
 	def sendReq(self,message):
-		#this will take a message from the rest of the system, sort and translate 
-		#it and send it off to the gates		
+		#this will take a message from the rest of the system, sort and translate
+		#it and send it off to the gates
 		pass
-	
-	def sendInput(self,gate,mInput):
-		if gate.gtype == 'locomotion':
-			lInPub = rospy.Publisher('locomotionInputs', Twist, queue_size=1, latch=True)
+
+	def sendLocInput(self,mInput):
+		#find which gate is the locomotive?
+		try:
+			for g in self.gkmodel.gates:
+					if g.gtype == 'locomotion':
+						lInPub = rospy.Publisher('locomotionInputs', Twist, queue_size=1, latch=True)
+						#add gatetype and gatenumber to the input?
+ 						thisLInput = mInput
+						rospy.loginfo("Sending Loc Input")
+						lInPub.publish(thisLInput)
+		except:
+			rospy.loginfo("couldn't send")
+
+			pass
 
 
-			#run a while for debugging
-			while(True):
-				newLInput = Twist()
-				rospy.loginfo("Sending Loc Input")
-				lInPub.publish(newLInput)
-				lInPub.publish(newLInput)
-				thisLInput = Twist()
-				time.sleep(1)
-
-				thisLInput = mInput
-				rospy.loginfo("Sending Loc Input")
-				lInPub.publish(thisLInput)
-				time.sleep(1)
-			
 
 
 if __name__ == '__main__':
@@ -75,4 +72,3 @@ if __name__ == '__main__':
 	gatekeeper = Gatekeeper()
 	rospy.loginfo("Gatekeeper Node Started")
 	rospy.spin()
-	

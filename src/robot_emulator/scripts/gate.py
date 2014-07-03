@@ -6,7 +6,7 @@ import moduleconnection as mc
 from geometry_msgs.msg import Twist
 import rospy
 import time, serial, sys
-import messagetranslations as mt
+import maketranslations as mt
 
 
 class Gate:
@@ -17,8 +17,8 @@ class Gate:
 		#is gnumber going to be port number as well?
 		port = '/dev/ttyACM{}'.format(self.number)
 		self.serPer = serial.Serial(port, baudrate=57600, timeout=1)
-			
-		
+
+
 	def parseReq(self,data):
 		rospy.loginfo('this is parse Req')
 		thisReq = data.request
@@ -31,7 +31,7 @@ class Gate:
 			#set up elifs eventually
 			#else:
 			#	print "didn't get the type{}".format mc.readunreliable('b#',self.number))
-			
+
 	def bootResponder(self):
 		rospy.loginfo('inside boot responder')
 		if ( mc.bootModule(self.serPer) == 'l' ):
@@ -48,9 +48,9 @@ class Gate:
 	def doInput(self,data):
 		#check the name on the input, if it matches this module
 		#do the input if possible or publish an error
-		
+
 		#inputs will become custom type - gatenumber, gatetype, and Twist
-	
+
  		#will add gate names later
 		#print 'at input'
 		#need more efficiency - only numbers transmitted
@@ -60,10 +60,10 @@ class Gate:
 		rospy.loginfo('instring {}'.format(inputString))
 		rospy.loginfo( mc.readunreliable(inputString, self.serPer) )
 		#mc.sendblind(inputString, self.serPer)
-		
+
 
 if __name__ == '__main__':
 	rospy.init_node('gate', anonymous=True)
-	gate = Gate(1)
+	gate = Gate(0)
 	rospy.loginfo("Gate Node Started")
 	rospy.spin()

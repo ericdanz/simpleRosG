@@ -125,18 +125,19 @@ void setMotors(){
       vIndex = vIndex + 1;
       value = 0;
       beginning = true;
+      neg=false;
       tIndex = tIndex + 1;
       wChar = dataBuffer[tIndex];
     }
     
   }
+  Serial.print(vectorArray[5]);
   
   //The vector has the Twist values - lx through az, 0->5
   if (vectorArray[5] > 0){
   motor4.setSpeed(vectorArray[5]);
   motor4.run(FORWARD);
   }
-  
   else if (vectorArray[5] < 0){
   motor4.setSpeed(vectorArray[5]*-1);
   motor4.run(BACKWARD);
