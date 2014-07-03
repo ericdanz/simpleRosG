@@ -14,8 +14,8 @@ def makeLocInput(message):
 
 def intTo255(number):
 	newInt = int(number)
-	if (newInt < 0):
-		newInt = newInt * -1
+	if (newInt < -254):
+		newInt = -254
 	if (newInt > 254):
 		newInt = 254
 	return newInt
