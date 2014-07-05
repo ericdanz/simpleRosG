@@ -16,7 +16,8 @@ def readunreliable(instring, ser):
 def sendblind(instring, ser):
 	ser.write(instring)
 
-
+def sendReboot(ser):
+	ser.write("!r#")
 
 def bootModule(ser):
 	sendblind("!#",ser)
