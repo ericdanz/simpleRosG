@@ -2,6 +2,8 @@
 #include <AFMotor.h>
 #include <geometry_msgs/Twist.h>
 #include <std_msgs/String.h>
+#include <robot_emulator/Request.h>
+#include <robot_emulator/BootResponse.h>
 //#include <robot_rosserial/Request.h>
 //#include <robot_rosserial/BootResponse.h>
 
@@ -20,7 +22,7 @@ const char* const bootword = "boot";
 void runMotors( const geometry_msgs::Twist& input_msg){
    int forwardvel = input_msg.linear.x;
    int turn = input_msg.angular.z;
-   
+
    //motor4.setSpeed(200);
    //motor4.run(FORWARD);
    //delay(1000);
@@ -37,8 +39,8 @@ void runMotors( const geometry_msgs::Twist& input_msg){
    else{
      motor4.setSpeed(0);
      motor4.run(RELEASE);
-   }   
-   
+   }
+
    if (forwardvel > 0) {
      motor1.setSpeed(forwardvel);
      motor1.run(FORWARD);
@@ -56,7 +58,7 @@ void runMotors( const geometry_msgs::Twist& input_msg){
      motor1.run(RELEASE);
      motor2.setSpeed(0);
      motor2.run(RELEASE);
-   }  
+   }
  }
 
 void requests( const std_msgs::String& req_msg){
@@ -74,18 +76,18 @@ ros::Subscriber<std_msgs::String> req_sub("reqs", &requests );
 
 void setup()
 {
-  
+
   motor1.setSpeed(200);
   motor1.run(RELEASE);
-   
+
   motor2.setSpeed(200);
   motor2.run(RELEASE);
-  
+
   motor4.setSpeed(200);
   motor4.run(FORWARD);
   delay(1000);
   motor4.run(RELEASE);
-  
+
   nh.initNode();
   nh.advertise(bootPub);
   nh.subscribe(in_sub);
@@ -95,7 +97,7 @@ void setup()
 
 void loop()
 {
-  
+
   nh.spinOnce();
  // delay(100);
 }
