@@ -8,16 +8,16 @@ def readunreliable(instring, ser):
 		repstring = ser.read()
 		if (repstring == '+' ) or (repstring == 'l'):
 			return repstring
-		if (timesrun == 1):
-			ser.write("!r#")
+		#if (timesrun == 2):
+		#	ser.write("!r#")
 
 	return 'error'
 
 def sendblind(instring, ser):
 	ser.write(instring)
-	
 
-	
+
+
 def bootModule(ser):
 	sendblind("!#",ser)
 	bootresponse = readunreliable('!b#',ser)
@@ -25,4 +25,3 @@ def bootModule(ser):
 		return bootresponse
 
 	return 'None'
-	

@@ -16,7 +16,7 @@ class Gate:
 		self.module = Module()
 		#is gnumber going to be port number as well?
 		port = '/dev/ttyACM{}'.format(self.number)
-		self.serPer = serial.Serial(port, baudrate=57600, timeout=1)
+		self.serPer = serial.Serial(port, baudrate=57600, timeout=.4)
 
 
 	def parseReq(self,data):

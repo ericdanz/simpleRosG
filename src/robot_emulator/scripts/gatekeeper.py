@@ -25,12 +25,13 @@ class Gatekeeper:
 		rospy.loginfo("Sending Boot Request")
 		reqPub.publish(thisRequest)
 
+
 	def buildModel(self,data):
 		rospy.loginfo("*"+data.gatetype+"*")
 		#make sure gatetype conforms to known types before creating a gate model
 		if data.gatetype == 'locomotion':
 			rospy.loginfo('its locomotion')
-			gmodel = GateModel(data.gatetype,data.gatenumber)
+			gmodel = GateModel(data.gatetype,data.gatenumber, Twist())
 			self.gkmodel.addgate(gmodel)
 
 		elif data.gatetype == 'sensor':
@@ -56,9 +57,12 @@ class Gatekeeper:
 					if g.gtype == 'locomotion':
 						lInPub = rospy.Publisher('locomotionInputs', Twist, queue_size=1, latch=True)
 						#add gatetype and gatenumber to the input?
- 						thisLInput = mInput
-						rospy.loginfo("Sending Loc Input")
-						lInPub.publish(thisLInput)
+						#add a check to make sure this input isn't the same as the last one
+						#save from retransmitting the same thing over and over
+						if (g.inMessage.linear.x != mInput.linear.x) or (g.inMessage.angular.z != mInput.angular.z):
+		 						g.inMessage = mInput
+								rospy.loginfo("Sending Loc Input")
+								lInPub.publish(g.inMessage)
 		except:
 			rospy.loginfo("couldn't send")
 
