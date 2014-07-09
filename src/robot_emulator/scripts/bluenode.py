@@ -7,6 +7,7 @@ import rospy
 import sys, time
 
 muuid = "8ce255c0-200a-11e0-ac64-0800200c9a66"
+altmuuid = '0'
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 blueconn.findservice(muuid,sock)
 
@@ -33,6 +34,21 @@ def blueNode():
        	         		notconnected = 0
 		except IOError:
         		notconnected = 1
+
+  blueconn.findservice(altmuuid,sock)
+  notconnected = 1
+  while(notconnected):
+    try:
+      if sock.getpeername()[1] == 0:
+              notconnected = 1
+               time.sleep(.5)
+                   else:
+                      notconnected = 0
+    except IOError:
+            notconnected = 1
+
+
+
 	boo = 1
 	while (boo):
         	rawdata = blueconn.listen(sock)
